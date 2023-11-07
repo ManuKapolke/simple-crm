@@ -25,13 +25,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
+import { DialogEditNameAndEmailComponent } from './dialog-edit-name-and-email/dialog-edit-name-and-email.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     UserComponent,
     DialogAddUserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    DialogEditAddressComponent,
+    DialogEditNameAndEmailComponent
   ],
   imports: [
     BrowserModule,

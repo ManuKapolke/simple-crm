@@ -1,7 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { Firestore, collection, doc, onSnapshot } from '@angular/fire/firestore';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/models/user.class';
+import { DialogEditNameAndEmailComponent } from '../dialog-edit-name-and-email/dialog-edit-name-and-email.component';
+import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
 
 @Component({
   selector: 'app-user-detail',
@@ -16,7 +19,7 @@ export class UserDetailComponent {
 
   firestore: Firestore = inject(Firestore);
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(public dialog: MatDialog, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -50,10 +53,16 @@ export class UserDetailComponent {
   }
 
   editNameAndEmail() {
-
+    const dialog = this.dialog.open(DialogEditNameAndEmailComponent);
+    dialog.componentInstance.user = new User(this.user.toJson());
+    dialog.componentInstance.user.id = this.user.id;
   }
 
   editAddress() {
-
+    debugger;
+    const dialog = this.dialog.open(DialogEditAddressComponent);
+    dialog.componentInstance.user = new User(this.user.toJson());
+    dialog.componentInstance.user.id = this.user.id;
   }
+
 }
