@@ -48,6 +48,14 @@
                 <!-- <mat-hint>Please enter your last name.</mat-hint> -->
             </mat-form-field>
         </div>
+
+        <div class="input-row">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>E-Mail</mat-label>
+                <input matInput type="email" [(ngModel)]="user.email" [disabled]="loading">
+                <!-- <mat-hint>Please enter your first name.</mat-hint> -->
+            </mat-form-field>
+        </div>
     </div>
     <div mat-dialog-actions>
         <button mat-button [disabled]="loading">Cancel</button>

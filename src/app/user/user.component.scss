@@ -1,3 +1,15 @@
+table {
+    width: 100%;
+
+    .user-row {
+        cursor: pointer;
+
+        &:hover {
+            background: whitesmoke;
+        }
+    }
+}
+
 .add-user-btn {
     position: absolute;
     right: 56px;

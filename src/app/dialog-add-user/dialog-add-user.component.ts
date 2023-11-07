@@ -19,7 +19,7 @@ export class DialogAddUserComponent {
 
   saveUser() {
     this.user.birthDate = this.birthDate?.getTime();
-    console.log('Current user is', this.user);
+    // console.log('Current user is', this.user);
 
     this.addUser(this.user);
   }
@@ -29,7 +29,7 @@ export class DialogAddUserComponent {
     await addDoc(this.getUsersRef(), newUser.toJson()).catch(
       err => console.error(err)
     ).then((result: any) => {
-      console.log('Adding user finished', result);
+      // console.log('Adding user finished', result);
       this.loading = false;
       this.dialogRef.close();
     });
