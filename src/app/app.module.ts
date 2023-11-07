@@ -24,6 +24,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +51,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     MatProgressBarModule,
     MatCardModule,
     MatTableModule,
+    MatMenuModule,
     provideFirebaseApp(() => initializeApp({ "projectId": "simple-crm-d3957", "appId": "1:962033128824:web:903086b264bc792220648d", "storageBucket": "simple-crm-d3957.appspot.com", "apiKey": "AIzaSyCdndFCo2SzPi8N0nL1InaTiDYKTJewD9g", "authDomain": "simple-crm-d3957.firebaseapp.com", "messagingSenderId": "962033128824" })),
     provideFirestore(() => getFirestore())
   ],

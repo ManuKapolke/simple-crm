@@ -4,31 +4,40 @@
     gap: 32px;
 }
 
-.user-detail-header {
-    min-height: 250px;
+.user-detail-header-card {
     background-color: var(--accent-pink);
     color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 32px;
 
-    img {
-        height: 100px;
-        width: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-
-    .user-details {
-        height: 100px;
+    .user-detail-header {
+        min-height: 250px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 32px;
 
-        h2 {
-            margin-bottom: 4px;
+        img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
+        .user-name-and-email {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                margin-bottom: 4px;
+            }
+
+        }
     }
+}
+
+.edit-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
 }

@@ -48,4 +48,12 @@ export class UserDetailComponent {
   getUsersRef() {
     return collection(this.firestore, 'users');
   }
+
+  editNameAndEmail() {
+
+  }
+
+  editAddress() {
+
+  }
 }
