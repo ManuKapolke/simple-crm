@@ -45,7 +45,9 @@ export class UserComponent {
 
       this.allUsers = []
       users.forEach(element => {
-        this.allUsers.push(element.data());
+        let user = element.data();
+        user['id'] = element.id;
+        this.allUsers.push(user);
       });
 
       this.userTable.renderRows()
@@ -61,4 +63,5 @@ export class UserComponent {
   openDialog() {
     this.dialog.open(DialogAddUserComponent);
   }
+
 }
